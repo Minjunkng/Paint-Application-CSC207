@@ -1,0 +1,572 @@
+# architecture
+
+# mvc
+# modelclasses
+	(list your classes here, no description)
+	- PaintModel
+# viewclasses
+	(list your classes here, no description)
+	- View
+# controllerclasses
+	(list your classes here, no description)
+	- PaintPanel
+
+# (other logical  ways of collecting your classes)
+# drawables
+    - Drawable (abstract)
+    - Circle
+    - Rectangle
+    - Square
+    - Squiggle
+    - Polyline
+    - Triangle
+    - Oval
+    - DrawableState
+# DrawingMode
+    - DrawingModeCircle
+    - DrawingModeCopyCut
+    - DrawingModeObjectEraser
+    - DrawingModeOval
+    - DrawingModePaste
+    - DrawingModePolylines
+    - DrawingModeRectangle
+    - DrawingModeSelect
+    - DrawingModeSquare
+    - DrawingModeSquiggle
+    - DrawingModeTriangle
+
+# UndoRedo
+    - Action
+    - Mutator
+    - MutatorCut
+    - MutatorClear
+    - MutatorPlace
+    - MutatorSelect
+
+# SavingAndLoad
+    - LoadFile
+    - SaveFile
+    - SaveItem
+    - SaveState
+    - SerializableColor
+
+# design patterns used (collections of classes into dp)
+--------------------------------------------------------------------------------
+	(for each design pattern, pull from  and modify designpatterntemplate.txt)
+
+--------------------------------------------------------------------------------
+name: Drawable Blueprint
+pattern name: Composite
+reference:
+	 https://refactoring.guru/design-patterns/composite
+
+purpose:
+	The composite design pattern is implemented mainly for the purpose of the ability to treat shapes in the same way. all shapes
+	and drawable objects have a common drawable blueprint which is captured using the drawable abstract class which every shape
+	and drawable item inherit from in order to conform to this blueprint. this pattern allows the paintmodel to hold one
+	arraylist of drawable objects instead of being constrained to separate lists for the many different kinds of
+	shapes and lines. additionally, the panel is able to call the draw method on any drawable object, hence treating
+	all drawables in a uniform manner.
+
+uml:
+	Refer to DrawableBlueprint_UML.png
+
+classes:
+	Drawable: component (abstract class version since it simplified the code more as an abstract class)
+	PaintModel: container (holds a list of general drawables objects)
+	Circle: leaf
+	Rectangle: leaf
+	Square: leaf
+	Squiggle: leaf
+	Polyline: leaf
+	Triangle: leaf
+	Oval: leaf
+
+usage:
+	A developer can add a shape by making a new concrete implementation of the drawable class.
+	making the shape actually show up on the canvas will require the addition of other classes
+	such as DrawingMode. This will be covered in another design strategy.
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+name: Global DrawableState
+pattern name: Singleton
+reference:
+	https://refactoring.guru/design-patterns/singleton
+
+purpose:
+	The singleton design pattern is implemented for the purpose of global accessibility to dynamically access and update
+	shape previews and maintaining open/close principle. the drawablestate allows for the global access of one drawable
+	object so that while the user is drawing a specific drawable object, the object being drawn can be accessed and
+	modified at run time without needing a global variable.
+
+uml:
+	Refer to GlobalDrawableState_UML.png (DrawingMode acts as the client)
+
+classes:
+	DrawableState: singleton
+
+usage:
+	When a developer wants to add a new drawable object, the DrawableState should be set upon the mouse click and
+	modified when need in the mouse drag events in the DrawingMode concrete class for the new drawable object.
+	(DrawingMode is a part of another design pattern)
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+name: Shape icon creation
+pattern name: Factory
+reference:
+	https://refactoring.guru/design-patterns/factory-method
+
+purpose:
+    the factory design is implemented for object creation for the shape icons on the buttons. This allows for future
+    and current shape button icons to be flexible and easy to maintain. This is because every shape icon involves its
+    own logic, thus through factory, the factory will encapsulate the logic of multiple shapes and be flexible to add
+    shapes.
+
+uml:
+	Refer to ShapeFactory_UML.png
+
+classes:
+	(list classes involved and their roles based on reference above)
+	ShapeFactory: Factory
+	ShapeChooserPanel: User Interface
+
+
+usage:
+    When a developer wants to add a new drawable shape, when creating a button to select the new shape mode, there
+    should be an icon representing the current mode. Thus, the developer can easily add it through the factory.
+    The factory also applies to editing current shapes. If the developer wishes to maintain or edit a shape icon,
+    the factory is an modular way to modify the icon.
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Name: Paint Canvas
+Pattern Name: Observer pattern.
+Reference: https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/
+
+Purpose:
+    The observer pattern is implemented to keep the data and UI components separate, avoiding tight coupling.
+    Each class has a single responsibility, PaintModel is responsible for managing the data (shapes, etc.) and
+    notifies observers when the data has changed, and the PaintPanel is responsible for rendering the data onto
+    the canvas according to the data from the model. This decoupling allows for easier maintenance, as the UI can
+    update automatically when the model changes without direct dependencies between them. The pattern promotes
+    flexibility and extensibility by allowing new features or UI components to be added without altering existing
+    code. Simply register components as observers to the model and listen for updates, thus requiring only minimal
+    code changes.
+
+UML:
+	Refer to PaintCanvas_UML.png.
+
+Classes:
+    Observable: Subject.
+	PaintModel: Concrete Subject.
+	Canvas:     Observer.
+	PaintPanel: Concrete Observer.
+
+Usage:
+	A developer would be utilizing this part of the code to manage or optimize the interactions between
+	the UI and the data model of the drawing application. Using PaintModel, the developer can add, remove,
+	or modify shapes. After making changes, PaintModel will notify observers to redraw. Using PaintPanel,
+	developers can use it to handle user inputs (like drawing or selecting shapes) and pass the input to
+	the PaintModel to update the state.
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Name: Undo Redo
+Pattern Name: Command
+Reference:
+	https://www.oodesign.com/command-pattern
+
+Purpose:
+	The Command design pattern enables undo and redo functionality by encapsulating each action
+	as a command object that can store state information about the action it performs. When an
+	action is executed, the command records necessary details so it can later reverse (undo) the
+	operation if needed. For redo, the command can reapply the stored action, allowing users to
+	toggle back and forth between states. This structure is particularly helpful in applications
+	where users might frequently make and revert changes. This design pattern encapsulates commands
+	in objects, allowing us to issue requests without knowing the requested operation or the
+	requesting object.
+
+UML:
+	(include a UML or refer to one included in the finalArchitecture directory)
+	(make it easy on us, and organize the diagram so that it looks like the
+	reference pattern).
+
+Classes:
+	PaintModel: Client
+	ModelInvoker: Invoker
+	Action: Receiver
+	Mutator: Command
+	MutatorCut: Concrete Command
+	MutatorClear: Concrete Command
+	MutatorPlace: Concrete Command
+	MutatorSelect: Concrete Command
+
+
+Usage:
+	When a developer wants to undo or redo the last made action within the canvas, this design pattern
+	allows easy manipulation and implementation when new features are added. When a developer makes
+	an action, the history is queued into the Model Invoker. Thus, when a developer wants to Undo/Redo
+	an action, a request(Command) is sent to the Action(which manipulates the canvas) through
+	Model Invoker, which modifies the history as needed.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+# high level architecture discussion
+
+--------------------------------------------------------------------------------
+New Concrete Shape/Drawable Object:
+Description:
+
+	A drawable object is essentially some object that is intended to be displayable on the canvas. All concrete
+	drawable objects inherit from the abstract Drawable class. A drawable object has a color, more accurately a
+	serializable color used for saving an editable file, a point which defines the starting point of the object,
+	a fill type string for "Outlined" or "Solid" if applicable, a shape type string being how the program will
+	differentiate this drawable object from other concrete drawables, and the thickness of the brush as a double.
+	All the respective getters and setters for these attributes are included in the abstract parent class, Drawable.
+
+
+Implementation:
+
+	A new concrete drawable class must first extend Drawable and implement Serializable.
+	Next, to complete a new concrete drawable object named X, implement the following abstract methods:
+
+	    - draw method:
+		The draw method intends to draw this instance of X on the Canvas. The draw method has no return
+		value and has a GraphicsContext parameter where this method will display this instance of X.
+		The intent of this method is to draw this instance of the concrete drawable on the canvas. If a fill type
+		is applicable to X, the draw method should have if statements differentiating between drawing a filled X and an
+		outline of X. For example, the draw method of a circle sets the color to the color of this instance of X, then
+		depending on the fill type, will draw a filled circle or outlined circle with centre at this X instance’s point
+		attribute position on the canvas.
+
+	    - contains method:
+		The contains method returns a boolean indicating whether the mouse position is inside this instance of X.
+		This method has two arguments, mouseX and mouseY, which are of the type double. This method should also
+		contain if statements differentiating between the behavior depending on fill type if applicable. For example,
+		the contains method for a filled circle returns true if a circle with radius from the centre to the point
+		(mouseX, mouseY) is within this instance of circle. For an outlined circle, the contains method returns true
+		if a circle with radius from the centre to the point (mouseX, mouseY) is between this instance of circle and
+		the circle with radius of this instance’s radius minus this instance’s thickness (outline thickness).
+
+	    - copy method:
+	    The copy method creates and returns a new instance of X that is identical to this instance of X.
+
+	The following methods should be added/overridden/overloaded based on the intention of the developer:
+	    - modify method:
+		The modify method describes how the shape will change while the current object is being drawn. Additionally,
+		the modify method should also be overloaded to fit the needs of the concrete drawable shape. For example,
+		the desired change for a circle being drawn is a change in radius, so the modify method for a circle would
+		pass in an argument for radius and set the radius of this circle to the value being passed in. This method
+		can be ignored if there is no desire to display change while drawing the current object.
+
+	    - Any other desired getters and setters: For example, setRadius and getRadius for a Circle.
+
+
+Example:
+	Circle.java
+	Rectangle.java
+	Square.java
+	Squiggle.java
+	Polyline.java
+	Triangle.java
+	Oval.java
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+New Drawing Mode:
+Description:
+
+   A drawing mode lets a user draw, erase, select, copy or paste a shape on the screen. The drawing mode either consists
+   of an image icon appearing in the left button panel on a button or within the dropdown menu with text. The shape
+   drawing mode is selected when the user clicks the button with the image icon or in the dropdown menu. This means that
+   a strategy for handling user input for this drawing mode is installed.
+
+   At this point, all mouse events in DrawingMode are implemented uniquely
+   To the corresponding current mode. Each class that implements DrawingMode
+   Will have a unique implementation for their shape, eraser, copy or paste.
+
+
+Implementation:
+   (inventory of ideas, required files, how they are tied to the architecture,
+      naming conventions (example: images/ButtonIconSquare.jpg, MHStrategySquare, ShapeSquare...)
+   To add a new drawing mode named X, implement the following:
+
+
+   image icon: In Shape factory, create a case for your drawing mode if
+               A button will be used, otherwise do not implement this. This will be used in ShapeChooserPanel. The shape
+               should be created using Shape from javafx.
+
+
+   ShapeChooserPanel: In ShapeChooserPanel, create a button using ButtonShapeCreate, with the first parameter being the
+                      name of the shape, and the other being the position on the left panel.
+
+   View: In View, if a dropdown menu DrawingMode is being used, add the name
+         Of the drawingmode in createMenuBar, before using editing handle() to
+         Switch drawingmodes using setMode() upon clicking the dropdown menu
+         Drawing mode option. If a dropdown option is not used, do not implement this.
+
+   PaintPanel: under setMode(), add a case for your drawing mode, and set the currentmode to your new Drawingmode class
+               that implements DrawingMode.
+
+   DrawingMode: DrawingMode is an interface for the mouse inputs the user
+                Can use while in DrawingMode. Each DrawingMode will have a
+                Unique implementation, as seen from MouseHandlerStrategy below
+
+   DrawingMode methods:
+      mousePressed: mousePressed() is a method in DrawingMode classes that
+                    Is the code that executes upon left click or right click.
+      mouseDragged: mouseDragged() is a method in DrawingMode classes that
+                    Is the code that executes upon the mouse being clicked and dragged across the panel.
+      mouseReleased: mouseReleased() is a method in DrawingMode classes that is executed upon releasing left click or right click
+      mouseMoved: mouseMoved() is a method in DrawingMode classes that is executed upon the mouse being moved around panel without left click or right click
+
+
+Example:
+   For Square drawing mode:
+      - ShapeChooserPanel
+      - ShapeFactory
+      - PaintPanel
+      - DrawingMode
+   For Copy paste Drawing Mode:
+      - View
+      - PaintPanel
+      - DrawingMode
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+New UI Left Panel Button:
+Description:
+    This feature is a new UI button in the left panel of the paint application. This button can represent a
+    specific drawing mode, a toggle function, drawing tools, etc. The button should be symbolized by an icon or
+    text depending on preference to allow for intuitive and easy understanding.
+
+	The new UI left panel button feature is going to be integrated into the architecture of the application,
+	specifically within the Model-View-Controller and Observer design patterns.
+
+	UI Control: The button is part of the ShapeChooserPanel, which acts as the control panel for picking
+	drawing modes and toggling functions. This control system creates interaction points for a user to
+	trigger changes in the Model and update the canvas on the screen accordingly.
+
+	Feedback: When the user clicks on a button, the View may provide feedback by highlighting the selected
+	mode or update a text field of a button to describe its new behaviour. This helps inform the user which
+	mode, toggle, or execute behaviour is active.
+
+	Event Handling: The View is also responsible for sending the user's button clicks to the appropriate handler.
+	This handler should be created by the developer to perform their specified function and hooked up to the
+	appropriate buttons within the ShapeChooserPanel.
+
+Implementation:
+	The following files will be required to implement a new UI button in the left panel:
+
+	    - ShapeChooserPanel.java:
+	    The file is responsible for creating the button, setting button behaviour, and adding it to the UI panel.
+
+	    - New Event Handler Class:
+	    A custom event handler class will be created to handle the button's action. This handler should modify
+	    data in the Model which then triggers an update. Should follow the naming convention "<Action>Handler"
+	    for uniformity with the rest of the code.
+
+        - PaintModel.java:
+        The file is responsible for the data which will be modified or accessed by the new event handler.
+
+
+	Steps to implement the New UI Left Panel Button:
+
+	    - Create the New Button:
+	    Add the button to the ShapeChooserPanel by creating a new private button or modifying the ButtonShapeCreate()
+	    helper if it is a new shape drawing mode. This step also includes creating the symbolization and formatting of
+	    the button, such as by setting the buttons graphic to an icon, setting the name of the button, or creating a
+	    node that uses combinations of methods to match a desired format (i.e. two buttons next to each other).
+
+	    - Create the Button's Event Handler:
+	    The event handler class will define the action that executes when the new button is clicked. Depending on the
+	    functionality of the button, the handler will perform different tasks. It is the developer's job to code the
+	    handler to modify or access data in the Model as the necessary for the button to perform its correct function.
+
+	    - Visual Feedback Mechanisms:
+	    The developer may need to add additional methods and logic to the Model or View classes. This step involves
+	    things such as button highlighting, dynamic button text, canvas updates, and real-time updates/interaction.
+	    These visual feedbacks should be implemented to help guide the user through their interaction with the paint
+	    application, making it clear which left panel tools are active and what actions are possible.
+
+Example:
+	For example, a list of files involved in the implementation of the clear shapes button:
+	- ShapeChooserPanel.java
+	- ClearShapeHandler.java
+	- PaintModel.java
+	- PaintPanel.java
+	- View.java
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Undo Redo:
+Description:
+
+	Undo and Redo allows the user to store all the actions made on the canvas, including the
+	following: (Placing, Cutting, Clearing specific shapes, moving shapes). The buttons for Undo and Redo
+	are within a dropdown menu at the top of the application. Once selected, the canvas will check its
+	history of actions, and undo, or redo the most recent action.
+
+	Once a new canvas is created, or a saved canvas is opened, the action history will reset. Undo and
+	Redo does not change the order in which shapes appear on the canvas, and replaces or removes items
+	at the specific order.
+
+
+Implementation:
+
+	The class PaintModel serves as the bridge point between placing items on the canvas, and recording
+	the action into history. To log an action X, implement the following methods.
+
+	DrawingMode:
+		For each DrawingMode(ie, each action that can be made), the PaintModel must record all the actions.
+		For all the shape based DrawingModes(Circle, Oval, Polylines, Rectangle, Square, Squiggle, Triangle),
+		the call to add to action history can be lumped together, as all are placing 1 item onto the canvas,
+		and thus the call to add to history can be triggered in PaintModel, when the call to add onto the
+		canvas is made. The rest of the drawing modes require their own call to add within the respective
+		DrawingMode classes.
+
+	PaintModel:
+	    when instantiating the PaintModel class, create an invoker class that holds all the action history,
+	    To record the moves made from DrawingMode classes, create a method within PaintModel that receives
+	    the type of action made(ie, from which drawable it came from) as well as the modifiable indexes and
+	    shapes that were involved in the action. This then create a concrete command class that is logged
+	    within the invoker.
+
+
+	ModelInvoker:
+	    The ModelInvoker should be instantiated with 3 objects. two arraylists that hold Commands, which serve
+	    as the history of the model, and one arraylist of drawables, which are the items that are printed onto
+	    the canvas. One of the arraylists should hold the actions that have occurred already, and the other should
+	    record the moves that have been undone.
+
+	    Within ModelInvoker, create a method that registers the command that it receives from PaintModel. This method
+	    should then add the received command into the arraylist that stores all occurred actions.
+
+	To Undo and Redo an action X, implement the following methods.
+
+	View:
+	    if within the dropdown menu, "Undo" or "Redo is selected", create a method within PaintModel that
+	    triggers once the button is pushed, that accepts a string.
+
+	PaintModel:
+	    As stated previously, PaintModel creates a ModelInvoker. In addition, the model also creates an Action
+	    class that is subsequently received by the concrete command implementation. The String received from
+	    the View class is then used to determine whether to Undo and Redo a move, and call a method within
+	    ModelInvoker.
+
+	ModelInvoker:
+	    create two methods in invoker that handle both cases from PaintModel above(one for Undo, one for Redo).
+	    If Undo is called, the most recent action from the "made actions" Arraylist should be removed
+	    and inserted into the "undone actions" arraylist. If Redo is called, the opposite should occur.
+	    both methods must execute the moved command.
+
+	Command(Interface):
+	    For each unique DrawingMode, a specific concrete command implementation must be implemented.
+	    Each concrete command will have a different and unique implementation. Each Command has a specific
+	    list of Drawables required information(indexes for certain implementations) that are used to modify
+	    the canvas.
+
+	Command methods:
+	    mutate: the concrete command class will run a method from Action, using the canvas as an input, as
+	    well as any other required information(indexes, drawable lists).
+
+    Action:
+        This class has a unique method for each corresponding concrete command class. For example, for
+        CommandCut will correspond to cut() in Action. each unique method will check whether an Undo or Redo
+        is queued and modify the canvas arraylist as intended.
+
+Example:
+   For Placing on Canvas:
+      - DrawingMode
+      - PaintModel
+      - MutatorPlace
+      - ModelInvoker
+   For Undo Redo Placing on Canvas:
+      - View
+      - PaintModel
+      - ModelInvoker
+      - MutatorPlace
+      - Action
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Save and Open:
+Description:
+
+   Save and Open allows a user to store a canvas state with a corresponding non=empty name within a
+   .ser file. This implementation uses Serializable, which allows for conversion between text and objects
+   for easy access and record of objects between sessions. The buttons for Save and Open
+   are within a dropdown menu at the top of the application. Once selected, the GUI will open a secondary
+   window that will either prompt the user to input a save file name, or to load a from a dropdown menu.
+
+
+Implementation:
+   To save and load a canvas X implement the following:
+
+    View:
+        Instantiate a SaveState object within the View for read and writing to the .ser file.
+
+	    If within the dropdown menu, "Save" is selected, create a method within View that creates a
+	    secondary window that prompts the user for a string name for the current canvas. The user should
+	    not be able to interact with the main display while being prompted for the save. Once a valid
+	    save name has been selected, the SaveState object will call a method that receives a new SaveItem
+	    object.
+
+	    If within the dropdown menu, "Load" is selected, create a method within View that has a dropdown menu
+	    of all the options/saved canvases. using the method within SaveState that returns all the SaveItems
+	    from the .ser file, a list of saved canvas names can be recorded, and then placed into the GUI. If a
+	    name is selected, parse through the list of SaveItems to find the corresponding canvas, and reset
+	    the model's canvas/drawables arraylist to the new SaveItem's canvas. The invoker must also be reset,
+	    as it is instantiated with the previous drawables list.
+
+	SaveItem:
+	    This class's constructor requires the name chosen by the user to correspond to the current canvas,
+	    once instantiated. this class serves as the object parametrized by the SaveState class, and must
+	    have two methods that return both the save name, and the save canvas.
+
+	SaveState:
+	    Since Serializable does not allow the open appending of .ser files, within the constructor of
+	    saveState, the LoadFile class must be triggered to first upload the already stored SaveItem objects
+	    from the .ser file into an Arraylist of SaveItems held within SaveState. This allows the arraylist
+	    to hold all the previously stored files to be rewritten back into the .ser file once the method is
+	    called. SaveState also hold the filename that the .ser file has.
+
+	    This method that receives a SaveItem object as a parameter, and is meant to write all the items into
+	    the .ser File through the SaveFile class. Since each time a .ser file is written to, it is wiping
+	    all fo the elements and rewriting, this method will add the new SaveItem to the canvas, and call
+	    SaveFile to write to the .ser file. This would remove all the .ser file contents, and replace with
+	    all the currently stored SaveItem objects.
+
+	    Implement another method that returns an arraylist of SaveItems read from the .ser file. This method
+	    should call LoadFile and return the most recent collecting of SaveItems which can be collected by view.
+
+	SaveFile:
+	    Implement a static method that has a filename parameter and the arraylist of SaveItems provided
+	    by SaveState to write onto the .ser file. This method then opens, and writes the arraylist into
+	    a series of bytes.
+
+	LoadFile:
+	    To load all the stored canvases, implement a static method that parametrizes a filename that corresponds
+	    to the .ser file LoadFile will Read from. this method will then parse through the file, adding all objects
+	    to an arraylist, and return the arraylist to SaveState. Note that the arraylist will be of Objects,
+	    not SaveItem, and must be typecast to SaveItem objects.
+
+	SerializableColor:
+	    In order for Serializable to serialize an object into bytes, or deserialize into objects again,
+	    the object must implement Serializable as well. Thus, all of SaveItem, and thus Drawable's variables
+	    must implement Serializable. Since javafx Color is not Serializable, a SerializableColor class must be
+	    created to properly perform Save and Open, as well as still implement the color modifiability for the GUI.
+
+Example:
+   For Saving a canvas:
+      - View
+      - SaveItem
+      - SaveState
+      - SaveFile
+   For Loading canvases:
+      - View
+      - SaveState
+      - LoadFile
+--------------------------------------------------------------------------------
+
+
+

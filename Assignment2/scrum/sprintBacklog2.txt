@@ -1,0 +1,97 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 2 Oct 20-Oct 27, 2024
+# Sprint 2 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : engmaxx : Complete
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 5 hours
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.004 : livicky8 : Complete
+NAME     : Architecture behind Model is poor
+PRIORITY : 3
+ESTIMATE : 1 day    ACTUAL : 4 hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.001 : lamjus27 : Completed
+NAME     : Draw Triangle
+PRIORITY : 1
+ESTIMATE : 2 hour ACTUAL : 2
+AS A     : user
+I WANT   : To click and establish one vertex of the triangle, drag, and release to specify
+           a triangle to be drawn in the current style.
+SO THAT  : I can add triangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.002 : engmaxx : Complete
+NAME     : Draw Triangle Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL :  2 hours
+AS A     : user
+I WANT   : to see a 'current' triangle on display that represents
+          the current triangle that I am drawing. As I drag drags the mouse,
+          the 'current' triangle changes in real time so that a triangle is
+          drawn with vertex at my initial triangle click, with side length out to
+          the current dragged mouse position.
+SO THAT  : I can see the triangle I am about to draw at the release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.005 : lamjus27 : Completed
+NAME     : Draw Oval
+PRIORITY : 1
+ESTIMATE : 3 hour ACTUAL : 3
+AS A     : user
+I WANT   : To click and establish the bounding box of the Oval, drag, and release to specify
+           an oval to be drawn in within the bounding box.
+SO THAT  : I can add ovals to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.006 : kangmi80 : Completed
+NAME     : Draw Oval Feedback
+PRIORITY : 2
+ESTIMATE : 1 hour ACTUAL : 5 minutes
+AS A     : user
+I WANT   : To see a 'current' oval on display that represents
+          the current oval that I am drawing. During the drag, a 'current'
+          oval should be on display. As the user drags, the 'current'
+          oval changes in real time so that an oval is drawn with updated
+          bounding box according to mouse position.
+SO THAT  : I can see the oval I am about to draw at the release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.007 : livicky8 : Complete
+NAME     : Draw Square
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To draw a square by clicking to establish a vertex and drag to resize it.
+SO THAT  : I can draw a square of any size.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.008 : kangmi80 : Completed
+NAME     : Draw Square Feedback
+PRIORITY : 2
+ESTIMATE : 1 hour ACTUAL : 5 minutes
+AS A     : user
+I WANT   : To see a 'current' square on display that represents the current
+           square that I am drawing. As the user drags, the 'current'
+           square changes in real time so that an oval is drawn with updated
+           bounding box according to mouse position.
+SO THAT  : I can see the square I want to create before I drawing it.
+--------------------------------------------------------------------------

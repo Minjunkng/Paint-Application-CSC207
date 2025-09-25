@@ -1,0 +1,582 @@
+# User Stories/Bugs (add as appropriate), modify at each Sprint Planning Meeting
+# If a USER STORY is large, break it into smaller user stories.
+# For example: Draw Circle was split into two user stories US1.010 and US1.011
+# 
+# For example, the color chooser user story involves: 
+# 1 Color chooser UI (which could be a USER STORY)
+# 2 Implementation of selected color into the drawing stream.
+# 
+# The naming convention is USs.stp s is the sprint number this user story
+# appears in. s is the sprint that introduced the user story, 
+# t is a topic number, and p is the parts that the topic is
+# divided into (for larger user stories).
+#
+# Please change the status of the user story/bug to 
+#     NotStarted,InProgress, Incomplete,Complete
+# as appropriate.
+
+
+
+
+
+
+
+
+
+
+
+# COMPLETED USER STORIES/BUGS BELOW ###########################################
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.001 : rosenbl6 : Complete
+NAME     : Draw Circle
+PRIORITY : 1
+ESTIMATE : 2 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : To click the center of the circle, drag, and release to specify
+           a circle to be drawn in the current style.
+SO THAT  : I can add circles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.001 : lamjus27 : Complete
+NAME     : Icons instead of text for drawing mode selection
+PRIORITY : 1
+ESTIMATE : 1 hour ACTUAL : 1
+ISSUE    : Would be nice to have icons instead of "Circle", "Rectangle", ...
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.006 : lamjus27 : Completed
+NAME     : Circle drawing is broken
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 3 hours
+ISSUE    : The first click should specify the center of the circle, with
+           a drag for the radius. This is not the case in the current
+           implementation.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.004 : kangmi80 : Complete
+NAME     : Draw Rectangle Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 4 hours
+AS A     : user
+I WANT   : To see a 'current' rectangle on display that represents
+           the current rectangle that I am drawing. During the drag, a 'current'
+           rectangle should be on display. As the user drags, the 'current'
+           rectangle changes in real time so that a rectangle is drawn with
+           the top right corner at users initial click, with width and height out to
+           the current dragged mouse position.
+SO THAT  : I can see the rectangle I am about to build on release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.002 : kangmi80 : Completed
+NAME     : Draw Circle Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 30 minutes
+AS A     : user
+I WANT   : To see a 'current' circle on display that represents
+           the current circle that I am drawing. As the user drags, the 'current'
+           circle changes in real time so that a circle is drawn with
+           centre at users initial circle click, with radius out to
+           the current dragged mouse position.
+SO THAT  : I can see the circle I am about to build on release of the mouse
+           button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US1.003 : livicky8 : Complete
+NAME     : Draw Rectangle
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL : 4 hours
+AS A     : user
+I WANT   : To click on one corner of a rectangle, drag, and release to
+		   specify two corners of a rectangle to be drawn in the current style.
+SO THAT  : I can add rectangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.005 : livicky8 : Complete
+NAME     : Squiggle is broken
+PRIORITY : 1
+ESTIMATE : 1 hour   ACTUAL : 1 hour
+ISSUE    : Squiggles are connected to each other by a straight line. Each drag
+		   of the mouse should be a separate squiggle. Possibly
+           the issue is with the representation of the squiggles in the Model.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.004 : livicky8 : Complete
+NAME     : Architecture behind Model is poor
+PRIORITY : 3
+ESTIMATE : 1 day    ACTUAL : 4 hours
+ISSUE    : Having a list of different types of drawable things in the
+           model is cumbersome. In fact, it is currently incorrect, with
+           Squiggle's not drawing properly. Need to re-architect the Model
+           so that it is more flexible, and easier to work with.
+           Consider some design patterns, or change of responsibility
+           here.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.007 : livicky8 : Complete
+NAME     : Draw Square
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To draw a square by clicking to establish a vertex and drag to resize it.
+SO THAT  : I can draw a square of any size.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.005 : lamjus27 : Completed
+NAME     : Draw Oval
+PRIORITY : 1
+ESTIMATE : 3 hour ACTUAL : 3
+AS A     : user
+I WANT   : To click and establish the center of the Oval, drag, and release to specify
+           an oval to be drawn in the current style.
+SO THAT  : I can add ovals to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.001 : lamjus27 : Completed
+NAME     : Draw Triangle
+PRIORITY : 1
+ESTIMATE : 2 hour ACTUAL : 2
+AS A     : user
+I WANT   : To click and establish one vertex of the triangle, drag, and release to specify
+           a triangle to be drawn in the current style.
+SO THAT  : I can add triangles to my canvas
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG1.002 : engmaxx : Complete
+NAME     : Drawing selection mode not indicated
+PRIORITY : 1
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+ISSUE    : Currently, you can't tell which mode "Circle", "Rectangle", ...
+           is currently selected. Is there a way
+           to highlight the currently selected mode?
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG2.003 : engmaxx : Complete
+NAME     : Architecture behind choosing selection mode is poor
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 5 hours
+ISSUE    : Code is not modular and is difficult to expand. Need a better
+           architecture behind selecting a drawing mode, and handling
+           the drawing events. Consider some design patterns here.
+           Refactor ShapeChooserPanel and PaintPanel to get rid of the
+           'if' blocks in the PaintPanel mouse event code.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.002 : engmaxx : Complete
+NAME     : Draw Triangle Feedback
+PRIORITY : 2
+ESTIMATE : 2 hours    ACTUAL :  2 hours
+AS A     : user
+I WANT   : to see a 'current' triangle on display that represents
+          the current triangle that I am drawing. As I drag the mouse,
+          the 'current' triangle changes in real time so that a triangle is
+          drawn with vertex at my initial triangle click, with side length out to
+          the current dragged mouse position.
+SO THAT  : I can see the triangle I am about to draw at the release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.006 : kangmi80 : Completed
+NAME     : Draw Oval Feedback
+PRIORITY : 2
+ESTIMATE : 1 hour ACTUAL : 5 minutes
+AS A     : user
+I WANT   : To see a 'current' oval on display that represents
+          the current oval that I am drawing. During the drag, a 'current'
+          oval should be on display. As the user drags, the 'current'
+          oval changes in real time so that an oval is drawn with updated
+          bounding box according to mouse position.
+SO THAT  : I can see the oval I am about to draw at the release of the mouse button.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US2.008 : kangmi80 : Completed
+NAME     : Draw Square Feedback
+PRIORITY : 2
+ESTIMATE : 1 hour ACTUAL : 5 minutes
+AS A     : user
+I WANT   : To see a 'current' square on display that represents the current
+           square that I am drawing. As the user drags, the 'current'
+           square changes in real time so that an oval is drawn with updated
+           bounding box according to mouse position.
+SO THAT  : I can see the square I want to create before I drawing it.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.009 : lamjus27 : Complete
+NAME     : Clear Shape
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 6
+AS A     : user
+I WANT   : To add a "clear shape" button.
+SO THAT  : I can clear the canvas of specific shape type.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.001 : livicky8 : Complete
+NAME     : Resizable Canvas
+PRIORITY : 3
+ESTIMATE : 1 hour    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To be able to drag the window to get a bigger drawing space.
+SO THAT  : I can expand and condense my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.002 : livicky8 : Complete
+NAME     : Object eraser
+PRIORITY : 3
+ESTIMATE : 4 hours     ACTUAL : 4 hours
+AS A     : user
+I WANT   : To be able to erase entire objects upon touching the object with the object eraser tool.
+SO THAT  : I can erase entire objects cleanly.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.010 : lamjus27 : Complete
+NAME     : Toggle Gridlines
+PRIORITY : 3
+ESTIMATE : 3 hours ACTUAL : 2
+AS A     : user
+I WANT   : To add a single toggle button that cycles gridlines of 4 levels (small, medium, large, or none).
+SO THAT  : There are gridlines that are purely visual to help alignment.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.008 : lamjus27 : Complete
+NAME     : Clear shapes button attempting to clear non-Drawable objects
+PRIORITY : 3
+ESTIMATE : 1 hours    ACTUAL : 1
+ISSUE    : Clear shapes attempts to clear non-Drawable objects causing object errors.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.011 : kangmi80 : Complete
+NAME     : Undo
+PRIORITY : 3
+ESTIMATE : 6 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : To record any and all actions made on the canvas in relation to placing,
+           removing and moving items on the canvas.
+SO THAT  : You can undo actions made on canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.012 : kangmi80 : Complete
+NAME     : Redo
+PRIORITY : 3
+ESTIMATE : 6 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : To store the undone shapes and re-add shapes in the proper order.
+SO THAT  : to be able to re-add undone movements.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.004 : engmaxx : Complete
+NAME     : Draw Polyline
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 3 hours
+AS A     : user
+I WANT   : To click multiple points on the canvas, and fill in a polyline and press right click to release and draw this
+           polyline in the current style.
+SO THAT  : I can add polylines to my canvas.
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : engmaxx : Complete
+NAME     : Draw Polyline Feedback
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : to display polyline in mid-construction like the other feedbacks.
+SO THAT  : I can see the polyline I will build before I release the mouse
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.001 : engmaxx : Complete
+NAME     : Clear shapes does not work with Polylines
+PRIORITY : 3
+ESTIMATE : 1 hours    ACTUAL : 1 hours
+ISSUE    : Button says "Clear None" instead of "clear polylines". And Does
+           not clear polylines when pressed.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.005 : livicky8 : Complete
+NAME     : Color selector
+PRIORITY : 3
+ESTIMATE : 4 hours    ACTUAL : 4 hours
+AS A     : user
+I WANT   : To be able to select the current drawing color, to be applied
+           to subsequent shapes. Example:
+           		selects color red
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select color green
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two red circles and a red rectangle as well as
+           	two green rectangles and a green squiggle
+SO THAT  :  I can choose the color of the current brush.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.006 : lamjus27 : Complete
+NAME     : Fill style selector
+PRIORITY : 3
+ESTIMATE : 4 hours    ACTUAL : 6
+AS A     : user
+I WANT   : To be able to select the current drawing style (filled or outline), to be applied
+           to subsequent shapes. Example:
+           		selects fill style solid
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select fill style outline
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two solid circles and a solid rectangle as well as
+           	two outlined rectangles and a squiggle
+SO THAT  : I can create shapes with specified fill style solid or outline.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.009 : livicky8 : Complete
+NAME     : Clear All
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To have the clear shape button have the option to clear the entire screen
+           when I click the object eraser.
+SO THAT  : I can clear the entire screen with on click.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.004 : livicky8 : Complete
+NAME     : Opacity Selector
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 4 hours
+AS A     : user
+I WANT   : To be able to select the current drawing opacity, to be applied
+                      to subsequent shapes. Example:
+                      		selects opacity 50%
+                      		mode circle
+                      		draw a circle
+                      		selects opacity 25%
+                      		draw a circle
+                      		mode rectangle
+                      		draw a rectangle
+                      		select opacity 100%
+                      		draw a rectangle
+                      		draw a rectangle
+                      		select mode squiggle
+                      		draw a squiggle
+                      	results in a 50% opaque circle, a 25% opaque circle, and a 50% opaque rectangle as well as
+                      	two 100& opaque rectangles and a 100% opaque squiggle
+SO THAT  : I can draw with different opacity.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.002 : kangmi80 : Complete
+NAME     : Cut
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : To click "Cut" from the dropdown menu, click 1 shape on the board
+           to cut from canvas. And if no shape is clicked, the current cut shape
+           will be the last cut shape(if applicable) until a valid shape is clicked.
+           This cut shape will then be stored for applicable use with "Paste".
+SO THAT  : I can cut shapes from the canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.002 : kangmi80 : Completed
+NAME     : Undo Specific Shapes
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 2 hours
+ISSUE    : Currently, the method that removes all the specific shapes in the canvas is not integrated with the
+           Undo-Redo design pattern, and should be added. This is bad OOP, and should be fixed.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.004 : livicky8 : Complete
+NAME     : Change Clear All to New
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+AS A     : user
+ISSUE    : The new button should being doing what clear all shapes currently does.
+           So, the goal is to transfer the function of "Clear All" to "New" and have
+           "Clear All" go back to being "Clear None"
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.001 : kangmi80 : Complete
+NAME     : Modify Undo-Redo
+PRIORITY : 4
+ESTIMATE : 4 hours ACTUAL : 8 hours
+ISSUE    : Currently, the Undo-Redo methods do not work as advertised. It does not take Into account movements
+           made when elements are cut, copied, pasted, and only removes and adds the last undone items. Proper
+           Functionality should reflect the undo and redo in google docs.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.008 : livicky8 : Complete
+NAME     : Save Current Drawing with Menu Options
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 2 hours
+AS A     : user
+I WANT   : To have two options to save the drawing I made on the current canvas size.
+           One being a PNG file and the other being the editable file implemented in US4.011.
+SO THAT  : I can save my drawing.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.010 : livicky8 : Complete
+NAME     : Eraser object is erasing outlined shapes where it is transparent
+           and not erasing very thick lines.
+PRIORITY : 3
+ESTIMATE : 8 hours   ACTUAL : 4 hours
+ISSUE    : The eraser erases the shape when it is in contact with any part of the shape whether it
+           is filled or transparent. This should not be the case, only should erase when it is touching
+           a filled part of the shape.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.011 : kangmi80 : Complete
+NAME     : Save - Open
+PRIORITY : 3
+ESTIMATE : 12 hours ACTUAL : 5 hours
+AS A     : user
+I WANT   : to click "Save" from the "Save" dropdown menu to save the current state of the board to a file.
+           The saved file should include all shapes, coordinates, colors, and other relevant properties
+           so that the board can be restored exactly as it was. After saving, I want to be able to click
+           "Open" in the dropdown menu to select a previously saved file and load it into the board. If a
+           valid file is selected, the board will display the saved shapes and properties, restoring the
+           saved state. If no file or an invalid file is selected, the board remains unchanged.
+SO THAT  : I can save my work and reload it later to continue where I left off.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.007 : engmaxx : Completed
+NAME     : Line thickness selector
+PRIORITY : 3
+ESTIMATE : 6 hours    ACTUAL : 8 hours
+AS A     : user
+I WANT   : To be able to select the current line thickness, to be applied
+           to subsequent shapes. Example:
+           		select fill style outline
+           		selects line thickness 1
+           		mode circle
+           		draw a circle
+           		draw a circle
+           		mode rectangle
+           		draw a rectangle
+           		select line thickness 9
+           		draw a rectangle
+           		draw a rectangle
+           		select mode squiggle
+           		draw a squiggle
+           	results in two thinly outlined circles and a thinly outlined
+           	rectangle as well as two thickly outlined rectangles and a thick squiggle
+SO THAT  : I can create an outlined shape with selected thickness.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.003 : engmaxx : Complete
+NAME     : polyline interaction with spacebar
+PRIORITY : 3
+ESTIMATE : 1 hours   ACTUAL : 2 hours
+ISSUE    : when creating a polyline and spacebar is pressed, it will exit
+           the polyline, leaving a non-placed line that updates on the next click.
+           This should not be the case, when spacebar is pressed, it should exit polyline tool.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.001 : engmaxx : Complete
+NAME     : Copy - Paste
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 7 hours
+AS A     : user
+I WANT   : to click "copy" from the dropdown menu, click 1 shape on the board
+           to copy in a clipboard. And if no shape is clicked, the current copied shape
+           will be the last copied shape(if applicable) until a valid shape is clicked.
+           This will copy left clicked shapes until another button is pressed. Then
+           I want to be able to click "paste" in the dropdown menu, then click a coordinate
+           on the paintpanel to paste the copied shape where I left click. If no shape was copied,
+           this does nothing. If another button that is not paste was clicked,
+           left clicking will no longer paste.
+SO THAT  : I can get copy and paste shapes from my panel
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.007 : lamjus27 : Complete
+NAME     : Drawable needs some kind of identification to recode clear shapes without illegal methods.
+PRIORITY : 3
+ESTIMATE : 2 hours   ACTUAL : 1
+ISSUE    : isInstance() should not have to be used to identify objects. Need to find a way to change
+           code so that clearing shapes does not use the isInstance() method.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.008 : engmaxx : Complete
+NAME     : Polyline breaks if not completed
+PRIORITY : 3
+ESTIMATE : 3 hours   ACTUAL : 2 hours
+ISSUE    : When you click another button before finishing a polyline, the next polyline will cause an error
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.001 : engmaxx : Complete
+NAME     : Copy - Paste
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 7 hours
+AS A     : user
+I WANT   : to click "copy" from the dropdown menu, click 1 shape on the board
+           to copy in a clipboard. And if no shape is clicked, the current copied shape
+           will be the last copied shape(if applicable) until a valid shape is clicked.
+           This will copy left clicked shapes until another button is pressed. Then
+           I want to be able to click "paste" in the dropdown menu, then click a coordinate
+           on the paintpanel to paste the copied shape where I left click. If no shape was copied,
+           this does nothing. If another button that is not paste was clicked,
+           left clicking will no longer paste.
+SO THAT  : I can get copy and paste shapes from my panel
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US4.010 : engmaxx : Complete
+NAME     : select and drag
+PRIORITY : 3
+ESTIMATE : 3 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : to click "select" from the dropdown menu, click 1 shape on the board
+           and drag it around the paint panel.
+SO THAT  : I can get can easily move shapes with my cursor
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.009 : livicky8 : Complete
+NAME     : Optimize Performance of Object Eraser
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 1 hour
+ISSUE    : The object eraser does not seem to work if the mouse movement is fast or erratic.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.0025 : kangmi80 : Complete
+NAME     : Clear Undo-Redo when switching canvas
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 2 hours
+ISSUE    : When opening a saved canvas, or creating a new canvas, the undo and redo history is not modified, and
+           thus, can try and undo or redo moves that correspond to a different canvas. To fix, wipe the
+           action history when transitioning into a new or saved canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.006 : kangmi80 : Completed
+NAME     : Implement Undo-Redo for select and drag
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 2 hours
+ISSUE    : Undo-Redo does not work for selecting a shape and dragging.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.012 : kangmi80 : Complete
+NAME     : Fixing Undo-Redo for canvas switch
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 30 minutes
+ISSUE    : When switching to a new or saved canvas, undo and redo does not work.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.011 : lamjus27 : Complete
+NAME     : Fix clear shape button to clear on last selected mode.
+PRIORITY : 3
+ESTIMATE : 3 hours    ACTUAL : 1
+ISSUE    : The clear shapes still says "Clear (shape)" after selecting drop-down menu items, but clicking the
+           clear shape button does not clear anything.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG4.013 : kangmi80 : Complete
+NAME     : Modifying Undo-Redo into proper command design pattern
+PRIORITY : 3
+ESTIMATE : 2 hours    ACTUAL : 3 hours
+ISSUE    : Currently Undo-Redo is bad OOP, and does not properly fit the Command design pattern.
+--------------------------------------------------------------------------
+
+
+# OMITTED USER STORIES/BUGS BELOW   ###########################################
+
+

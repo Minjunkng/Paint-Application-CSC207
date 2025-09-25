@@ -1,0 +1,96 @@
+# Move User Stories from the ProductBacklog 
+# to the appropriate sprintBacklogN.txt after the 
+# Sprint Planning Meeting.
+
+# Sprint 3 Oct 27-Nov 03, 2024
+# Sprint 3 Backlog UserStories go below
+
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.009 : lamjus27 : Complete
+NAME     : Clear Shape
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 6
+AS A     : user
+I WANT   : To add a "clear shape" button.
+SO THAT  : I can clear the canvas of specific shape type.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.010 : lamjus27 : Complete
+NAME     : Toggle Gridlines
+PRIORITY : 3
+ESTIMATE : 3 hours ACTUAL : 2
+AS A     : user
+I WANT   : To add a single toggle button that cycles gridlines of 4 levels (small, medium, large, or none).
+SO THAT  : There are gridlines that are purely visual to help alignment.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.001 : livicky8 : Complete
+NAME     : Resizable Canvas
+PRIORITY : 3
+ESTIMATE : 1 hour    ACTUAL : 1 hour
+AS A     : user
+I WANT   : To be able to drag the window to get a bigger drawing space.
+SO THAT  : I can expand and condense my canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.002 : livicky8 : Complete
+NAME     : Object Eraser
+PRIORITY : 3
+ESTIMATE : 4 hours    ACTUAL : 4 hours
+AS A     : user
+I WANT   : To be able to erase entire objects upon touching the object with the object eraser tool.
+SO THAT  : I can erase entire objects cleanly.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.004 : engmaxx : Complete
+NAME     : Draw Polyline
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 3 hours
+AS A     : user
+I WANT   : To click multiple points on the canvas, and fill in a polyline and press right click to release and draw this
+           polyline in the current style.
+SO THAT  : I can add polylines to my canvas.
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.005 : engmaxx : Complete
+NAME     : Draw Polyline Feedback
+PRIORITY : 3
+ESTIMATE : 2 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : to display polyline in mid-construction like the other feedbacks.
+SO THAT  : I can see the polyline I will build before I release the mouse
+---------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.008 : lamjus27 : Complete
+NAME     : Clear shapes button attempting to clear non-Drawable objects
+PRIORITY : 3
+ESTIMATE : 1 hours    ACTUAL : 1
+ISSUE    : Clear shapes attempts to clear non-Drawable objects causing object errors.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.011 : kangmi80 : Complete
+NAME     : Undo
+PRIORITY : 3
+ESTIMATE : 6 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : to record any and all actions made on the canvas in relation to placing,
+           removing and moving items on the canvas.
+SO THAT  : You can undo actions made on canvas.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : USER STORY US3.012 : kangmi80 : Complete
+NAME     : Redo
+PRIORITY : 3
+ESTIMATE : 6 hours ACTUAL : 2 hours
+AS A     : user
+I WANT   : to store the undone shapes and re-add shapes in the proper order.
+SO THAT  : to be able to re-add undone movements.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+TYPE     : BUG BUG3.001 : engmaxx : Complete
+NAME     : Clear shapes does not work with Polylines
+PRIORITY : 3
+ESTIMATE : 1 hours    ACTUAL : 1 hours
+ISSUE    : Button says "Clear None" instead of "clear polylines". And Does
+           not clear polylines when pressed.
+--------------------------------------------------------------------------

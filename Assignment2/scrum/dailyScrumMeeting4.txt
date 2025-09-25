@@ -1,0 +1,163 @@
+# Fill in, commit and push each day.
+Member name: Minjun Kang      email: minjun.kang@mail.utoronto.ca    utorid:kangmi80
+
+Oct 14,2024
+	What I did yesterday: N/A
+	What I will do today: N/A  (The assignment was not released until Oct 15)
+	Obstacles I face: N/A
+
+Oct 15,2024
+	What I did yesterday: N/A
+	What I will do today: Clone the repo, make a branch, refresh my git knowledge + look at A2
+	Obstacles I face: troubleshooting and practicing my git manipulation
+
+Oct 16,2024
+	What I did yesterday: Getting adjusted with Git, reading assignment materials
+	What I will do today: finish lab07, and make new USER stories
+	Obstacles I face: properly branching, pushing and understanding material
+
+Oct 17,2024
+	What I did yesterday: Completed Lab07 steps
+	What I will do today: Work on US1.004
+	Obstacles I face: Applying javafx and branching properly
+
+Oct 18,2024
+	What I did yesterday: Completed US1.002 and US1.004
+	What I will do today: Nothing, all tasks assignmed completed
+	Obstacles I face: N/A
+
+Oct 19,2024
+	What I did yesterday: Nothing, studying for MAT223
+	What I will do today: Working on Undo and Redo
+	Obstacles I face: N/A
+
+Oct 20,2024
+	What I did yesterday: Working on Undo and Redo
+	What I will do today: Working on Undo and Redo
+	Obstacles I face: N/A
+
+Oct 21,2024
+	What I did yesterday: Working on Undo and Redo
+	What I will do today: Clean up and polish sprint1 code
+	Obstacles I face: optimizing previously made code
+
+Oct 22,2024
+	What I did yesterday: Worked on Undo and Redo
+	What I will do today: Look over the feedback work
+	Obstacles I face: seeing new implementation/new design choices
+
+Oct 23,2024
+	What I did yesterday: Look over the feedback work
+	What I will do today: Look over the feedback work
+	Obstacles I face: Same as yesterday
+
+Oct 24,2024
+	What I did yesterday: Same as yesterday(Studied for midterm)
+	What I will do today: Complete US2.006 and US2.008
+	Obstacles I face: Learning the new design patterns
+
+Oct 25,2024
+	What I did yesterday: Completed US2.006 and US2.008
+	What I will do today: Nothing, Since it is now reading week
+	Obstacles I face: N/A
+
+Oct 26,2024
+	What I did yesterday: N/A
+	What I will do today: N/A
+	Obstacles I face: N/A
+
+Oct 27,2024
+	What I did yesterday: Wrote CSC207 midterm
+    What I will do today: Discuss Major architectural decisions
+    Obstacles I face: N/A
+
+Oct 28,2024
+	What I did yesterday: Finished Sprint 2
+    What I will do today: Review Sprint 3
+    Obstacles I face: N/A
+
+Oct 29,2024
+	What I did yesterday: Review Sprint 3
+    What I will do today: Discussed with peers about delegation of tasks, and plans for the current sprint(3)
+    Obstacles I face: N/A
+
+Oct 30,2024
+	What I did yesterday: Discussed with peers about delegation of tasks
+	What I will do today: Discuss major architectural design for UNDO REDO implementation in sprint 3 possiblyÉ
+	Obstacles I face: N/A
+
+Oct 31,2024
+	What I did yesterday: Discussed design choices
+	What I will do today: Start work on Sprint 3
+	Obstacles I face: None so far
+
+Nov 1,2024
+	What I did yesterday: Drove from Ottawa to Toronto
+	What I will do today: Start work on Sprint 3
+	Obstacles I face: N/A
+
+Nov 2,2024
+	What I did yesterday: Started work on Sprint 3
+	What I will do today: Complete and request merge for US3.011 and US3.012
+	Obstacles I face: N/A
+
+Nov 3,2024
+	What I did yesterday: Completed Sprint 3
+	What I will do today: Look for design optimization and bugs
+	Obstacles I face: N/A
+
+Nov 4,2024
+	What I did yesterday: Look for design optimization and bugs
+	What I will do today: Studying for ECO102
+	Obstacles I face: N/A
+
+Nov 5,2024
+	What I did yesterday: Studying for ECO102
+	What I will do today: Fixing scrum issues
+	Obstacles I face: N/A
+
+Nov 6,2024
+	What I did yesterday: Fixing scrum issues
+	What I will do today: Work on Sprint 4 items
+	Obstacles I face: Coordinating with scrum leader about intersecting User stories
+
+Nov 7,2024
+	What I did yesterday: Worked on BUG4.002 and BUG4.001
+	What I will do today: Complete BUG's and brainstorm extra features
+	Obstacles I face: N/A
+
+Nov 8,2024
+	What I did yesterday: Completed BUG4.001, and Started work on US4.011
+	What I will do today: Complete US4.011
+	Obstacles I face: N/A
+
+Nov 9,2024
+	What I did yesterday: Complete US4.011
+	What I will do today: Talk architecture, request merges.
+	Obstacles I face: N/A
+
+Nov 10,2024
+	What I did yesterday: Work on design issues
+	What I will do today: Fixing minor architecture issues, finishing architecture.txt
+	Obstacles I face: N/A
+
+Nov 11,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 12,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 13,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 14,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+

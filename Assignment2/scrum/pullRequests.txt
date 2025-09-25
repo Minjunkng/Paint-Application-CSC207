@@ -1,0 +1,39 @@
+Pull Requests:
+
+Sprint3:
+ US3.001 author: livicky8 puller: lamjus27 status: Complete
+ US3.002 author: livicky8 puller: lamjus27 status: Complete
+ US3.009 author: lamjus27 puller: livicky8 status: Complete
+ US3.010 author: lamjus27 puller: engmaxx  status: Complete
+BUG3.008 author: lamjus27 puller: livicky8 status: Complete
+ US3.004 author: engmaxx  puller: kangmi80 status: Complete
+BUG3.001 author: engmaxx  puller: lamjus27 status: Complete
+ US3.005 author: engmaxx  puller: kangmi80 status: Complete
+ US3.011 author: kangmi80 puller: engmaxx  status: Complete
+ US3.012 author: kangmi80 puller: engmaxx  status: Complete
+
+Sprint4:
+ US4.005 author: livicky8 puller: engmaxx  status: Complete
+ US4.006 author: lamjus27 puller: livicky8 status: Complete
+ US4.009 author: livicky8 puller: kangmi80 status: Complete
+BUG4.003 author: engmaxx  puller: livicky8 status: Complete
+BUG4.007 author: lamjus27 puller: livicky8 status: Complete
+ US4.001 author: engmaxx  puller: kangmi80 status: Complete
+BUG4.008 author: engmaxx  puller: kangmi80 status: Complete
+BUG4.002 author: kangmi80 puller: engmaxx  status: Complete
+ US4.004 author: livicky8 puller: lamjus27 status: Complete
+ US4.002 author: kangmi80 puller: engmaxx  status: Complete
+BUG4.004 author: livicky8 puller: kangmi80 status: Complete
+ US4.010 author: engmaxx  puller: livicky8 status: Complete
+BUG4.001 author: kangmi80 puller: engmaxx  status: Complete
+ US4.011 author: kangmi80 puller: livicky8 status: Complete
+ US4.007 author: engmaxx  puller: livicky8 status: Complete
+ US4.008 author: livicky8 puller: kangmi80 status: Complete
+BUG4.010 author: livicky8 puller: engmaxx  status: Complete
+BUG4.009 author: livicky8 puller: engmaxx  status: Complete
+BUG4.005 author: kangmi80 puller: lamjus27 status: Complete
+BUG4.006 author: kangmi80 puller: lamjus27 status: Complete
+BUG4.012 author: kangmi80 puller: lamjus27 status: Complete
+BUG4.011 author: lamjus27 puller: engmaxx  status: Complete
+BUG4.013 author: kangmi80 puller: engmaxx  status: Complete
+

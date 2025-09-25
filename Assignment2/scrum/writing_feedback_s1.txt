@@ -1,0 +1,10 @@
+S&O: 2.5
+WM: 3
+AE: 4
+
+Feedback:
+– [WM] Make sure you're not using ambiguous pronouns, like in architecture.txt: "Within ShapeChooserPanel, it implements their own..." what is 'it'?
+- [S&O] No deductions for this since UML diagrams were not necessary, but your .uml file can't be opened on all devices since it requires an application to read it with the .uml extension. Consider adding an image instead.
+- [S&O] There is some confusion regarding the format of user stories. In US1.002 in productBacklog.txt, for example, it says "AS A user I WANT as a user is specifying.." when it should follow the format so that "AS A .. I WANT .. SO THAT" all flows together like a sentence or phrase. This was well done in US1.003 for reference.
+- [WM] Be clear in how you are referring to objects in architecture.txt. For example, you have "...to the available shapes to inform the user about the shape they will place. For rectangle..". Instead, be clear about what rectangle refers to. The class? An instance of the Shape class? 
+- [AE] Great job on audience expectations!

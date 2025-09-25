@@ -1,0 +1,91 @@
+# Please discuss your architectural decisions below.
+
+High Level Architecture:
+
+	MVC
+	To keep the code simple, a partial MVC was implemented.
+	
+	Model
+	The Model captures enough information to re-draw the sketch of
+	the user.
+
+	The model is used in PaintModel and PaintPanel. PaintModel updates the application to reflect changes made with
+	squiggles, circles and rectangles. For squiggles, it adds an arraylists of points to an arraylist to reflect the
+	lines that are being drawn on the panel. For rectangles and circles, while it is being dragged in PaintPanel, it is
+	constantly being updated in PaintModel with an overridden method called "modify". Through constant updates while
+	the mouse is dragged, this allows the user to see what a shape may look like on release of their mouse. Finally on
+	release of their mouse, a new rectangle or circle is added to the list of rectangles or circles as a new shape.
+	
+	View+Controller
+	There is a View class as well as a few, what we call, view components.
+	The View class containing the BorderPane as well as containing all of its components.
+	View components are meant to be contained in the main View.
+	Examples of view components are PaintPanel and ShapeChooserPanel.
+	
+	The View class, and view components all implements their own controller.
+	For example, the PaintPanel listens to its own MouseEvents.
+	This is instead of separating out the Controller from the View. This choice
+	was made to simplify the code, yet still keep it modular and clear.
+	
+	Each view component can see the containing View as well as the Model
+	as appropriate. This means that each view component can speak to the
+	other view components. An example of this is when the ShapeChooserPanel
+	buttons are clicked, resulting in a mode change in the PaintPanel.
+
+    Within ShapeChooserPanel, it implements their own controller as every time a shape is chosen by clicking a button
+    from it's view, it will update the controller of which shape is chosen to the model and update the colour of the
+    button in view.
+
+    In PaintPanel, everytime a shape is created using click, drag, and release, the controller in the same class updates
+    the model to be able to show what the shape looks like at every stage of click, drag, and release.
+
+	
+---------------------------------------------------------------------
+TODO!!! Add in more architecture and discussion. For example, 
+do you do something interesting to fix the association between the 
+ShapeChooser and the PaintPanel? How about the PaintModel, something
+is clearly wrong with it. Can you come up with a better architecture?
+
+To fix the association between the shape chooser and paint panel, we implemented a design such that it would be easier
+to differentiate which shape is being used in the paint panel. The button to the shape that is currently being used for
+the paint panel is now highlighted in yellow.
+
+Within the paint model, to fix the inability to edit created shapes, we came up with an architecture that
+stores the information about current shapes on the paint panel. Adding this allows us to store, edit and remove shapes.
+
+Additionally, within the shape chooser panel, for better architecture, we added icons on the buttons to differentiate
+shapes easier.
+
+To improve the architecture for squiggle in paint panel, instead of using an arraylist to store the points, a nested
+arraylist called "lines" within the paint model was implemented. This allows for the squiggle to have discontinued line
+segments between clicks, drags and releases.
+
+Another fix done to the architecture of the circle was how it was spawned. Because the fixed point was located at the
+top left of the circle, it made it difficult for a user to accurately draw their circle. Thus, to fix this, we made
+the fixed point of the circle to be in the center of the circle. Additionally, the circle only accounted for the
+horizontal distance. To improve this architecture, we calculated the radius to include the vertical distance.
+
+Finally, for better architecture, within paint panel, we added feedback to the available shapes to inform the user about
+the shape they will place. For rectangle, this was made possible by adding an overload function that modifies width and
+height to the position of the mouse. Upon first click, the size is 0, and on release of the mouse, the temporary
+modifiable rectangle is removed and a Rectangle takes its place.
+
+Reference to repo_a2_227.uml to get a visual on how classes interact with each other. This also includes the MCV.
+---------------------------------------------------------------------
+
+DESIGN PATTERNS USED
+	TODO!!! If you introduce a Design Pattern to solve a problem, 
+	discuss it below. Only add design patterns if they simplify and improve
+	the code. I see at least two that would greatly improve code.
+	Strategy:
+	Command: 
+	Singleton: Rectangle state
+	    We used singleton pattern for rectangle state. This is because we only wanted one instance of the rectangle
+	    state and to avoid declaring a class variable.
+	Composite:
+	Factory:
+	Builder:
+	Observer/Observable:
+	... (any others you find useful) ...
+
+OTHER ARCHITECTURE DISCUSSIONS

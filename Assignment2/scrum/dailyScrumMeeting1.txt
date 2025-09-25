@@ -1,0 +1,171 @@
+# Fill in, commit and push each day.
+Member name:  Maxx Eng    email: maxx.eng@mail.utoronto.ca     utorid: engmaxx
+
+Oct 14,2024
+	What I did yesterday: N/A
+	What I will do today: N/A
+	Obstacles I face: N/A
+
+Oct 15,2024
+	What I did yesterday: N/A
+	What I will do today: add contact info to group I joined in members.txt
+	Obstacles I face: Merging text with conflicts
+
+Oct 16,2024
+	What I did yesterday: Added contact info to members.txt
+	What I will do today: Collaborate with group members and do lab 7
+	Obstacles I face: Duplicate files showing up and dealing with it
+
+Oct 17,2024
+	What I did yesterday: Worked on BUG1.002 on my local branch
+	What I will do today: finish BUG1.002
+	Obstacles I face: Merging
+
+Oct 18,2024
+	What I did yesterday: Finished BUG1.002
+	What I will do today: work on architecture.txt
+	Obstacles I face: Reverting changes due to team changes that weren't supposed to happen
+
+Oct 19,2024
+	What I did yesterday: Worked on architecture.txt
+	What I will do today: Finish most of architecture.txt
+	Obstacles I face: N/A
+
+Oct 20,2024
+	What I did yesterday: Worked on architecture.txt
+	What I will do today: Finish architecture.txt
+	Obstacles I face: N/A
+
+Oct 21,2024
+	What I did yesterday: Finished architecture.txt
+	What I will do today: Start BUG2.003
+	Obstacles I face: N/A
+
+Oct 22,2024
+	What I did yesterday: Started BUG2.003
+	What I will do today: Almost finish BUG2.003 by implementing open/closed principle
+	Obstacles I face: Understanding how the open/closed principle is applied to code
+
+Oct 23,2024
+	What I did yesterday: Nearly finished BUG2.003
+	What I will do today: Finished BUG2.003, finished US2.002
+	Obstacles I face: branched before Oval or Triangle was created, had to implement it again.
+
+Oct 24,2024
+	What I did yesterday: Finished US2.002
+	What I will do today: Review with team about architecture and UML
+	Obstacles I face: N/A
+
+Oct 25,2024
+	What I did yesterday: Talk with team about architecture and UML
+	What I will do today: Talk about architecture with team
+	Obstacles I face: N/A
+
+Oct 26,2024
+	What I did yesterday: Talk about architecture with team
+	What I will do today: Discuss potential problems with team
+	Obstacles I face: N/A
+
+Oct 27,2024
+	What I did yesterday: Discuss potential problems with team
+	What I will do today: Finish sprint2
+	Obstacles I face: N/A
+
+Oct 28,2024
+	What I did yesterday: Finish sprint 2
+	What I will do today: Talk with team about sprint3
+	Obstacles I face: N/A
+
+Oct 29,2024
+	What I did yesterday: Talk with team about sprint
+	What I will do today: Talk to team about things to put on sprint3 and add them to sprint3
+	and brainstorm how to do my user story
+	Obstacles I face: N/A
+
+Oct 30,2024
+	What I did yesterday: added US/BUGS to sprint3
+	What I will do today: work on US3.004 on my local branch
+	Obstacles I face: N/A
+
+Oct 31,2024
+	What I did yesterday: work on US3.004 on my local branch
+	What I will do today: continue working on US3.004 on my local branch
+	Obstacles I face: N/A
+
+Nov 1,2024
+	What I did yesterday: work on US3.004
+	What I will do today: continue working on US3.004
+	Obstacles I face: N/A
+
+Nov 2,2024
+	What I did yesterday: work on US3.004
+	What I will do today: complete US3.004, uploaded it to pull requests and started local new branch for US3.005
+	and completed US3.005. Pulled from pull request for US3.011, US3.010, US3.012
+	Obstacles I face: discussing rejected changes for pull requests with team
+
+Nov 3,2024
+	What I did yesterday: Finished US3.004, US3.005, pulled pull requests, and finished my backlog of the sprint
+	What I will do today: discuss with teams about any potential concerns before we finish sprint 3
+	Obstacles I face: N/A
+
+Nov 4,2024
+	What I did yesterday: Discuss with team about potential concerns before finishing sprint 3
+	What I will do today: Talk about feedback with team and what to do for sprint 4
+	Obstacles I face: N/A
+
+Nov 5,2024
+	What I did yesterday: Talk about feedback with team and what to do for sprint 4
+	What I will do today: Finish BUG4.003 and start US4.001
+	Obstacles I face: realizing that spacebar clicks the button shapes again, thus creating
+	                  a new instance of my shape, therefore bugging out my Polyline which had
+	                  an attribute that kept resetting. Finding a way to deselect a shape for the
+	                  copy method
+
+Nov 6,2024
+	What I did yesterday: Finish BUG4.004, started US4.001
+	What I will do today: completed US4.001, BUG4.008, finished US4.010
+	Obstacles I face: copy pasting at the cursor's location, finding out why polyline broke
+
+Nov 7,2024
+	What I did yesterday: completed US4.001, BUG4.008, US4.010
+	What I will do today: think of US/BUGS to implement and talked to team member about switching
+	                      User stories. Then started US4.007
+	Obstacles I face: N/A
+
+Nov 8,2024
+	What I did yesterday: think of US/BUGS to implement and talked to team member about switching
+                          User stories. Then started US4.007
+	What I will do today: Finished US4.007, pulled a few stories from pull requests
+	Obstacles I face: changing thickness caused all past shapes' thickness to also change
+	                  this was resolved through creating an instance variable and modifying DrawingModes.
+
+Nov 9,2024
+	What I did yesterday: Finished US4.007, pulled a few stories from pull requests
+	What I will do today: Update architecture, pull US4.011 from pull requests
+	Obstacles I face: N/A
+
+Nov 10,2024
+	What I did yesterday: Update architecture, pull US4.011
+	What I will do today: update final architecture, pull BUG4.013
+	Obstacles I face: Merging some certain merge conflicts with master
+
+Nov 11,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 12,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 13,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 14,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+

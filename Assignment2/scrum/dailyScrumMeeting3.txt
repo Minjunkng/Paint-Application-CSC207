@@ -1,0 +1,163 @@
+# Fill in, commit and push each day.
+Member name: Justin Lam      email: Jus.lam@mail.utoronto.ca     utorid: lamjus27
+
+Oct 14,2024
+	What I did yesterday: N/A
+	What I will do today: N/A
+	Obstacles I face: N/A
+
+Oct 15,2024
+	What I did yesterday: N/A
+	What I will do today: Join a group, clone repo, and do members.txt.
+	Obstacles I face: None.
+
+Oct 16,2024
+	What I did yesterday: Joined group, cloned repo, and did members.txt.
+	What I will do today: Content from lab 7.
+	Obstacles I face: Learning how to branch and merge properly.
+
+Oct 17,2024
+	What I did yesterday: Completed BUG1.001 and added 2 user stories.
+	What I will do today: Work on BUG1.006.
+	Obstacles I face: Figuring out why the circle was not centered at the initial point of mouse.
+
+Oct 18,2024
+	What I did yesterday: Completed BUG1.006.
+	What I will do today: Review my completed work and try to find ideas on how to implement my user stories.
+	Obstacles I face: None, sprint 1 completed.
+
+Oct 19,2024
+	What I did yesterday: Reviewed completed code, searched for ideas to do user story.
+	What I will do today: Nothing, waiting for sprint 2.
+	Obstacles I face: None.
+
+Oct 20,2024
+	What I did yesterday: Nothing.
+	What I will do today: Study for other courses.
+	Obstacles I face: None.
+
+Oct 21,2024
+	What I did yesterday: Studied for other courses.
+	What I will do today: Work on US2.001 and US2.005.
+	Obstacles I face: Figuring out how to adjust Oval and Triangle when mouse is position above or behind original point.
+
+Oct 22,2024
+	What I did yesterday: Completed US2.001 and US2.005, filled in backlogs and scrum.
+	What I will do today: Test yesterday's codes for correctness.
+	Obstacles I face: Trying to set up environment for testing.
+
+Oct 23,2024
+	What I did yesterday: Tested my code, filled in scrum.
+	What I will do today: Rework US2.001 and US2.005.
+	Obstacles I face: Refactoring code to adjust to new structure.
+
+Oct 24,2024
+	What I did yesterday: Finished updates for US2.001 and US2.005.
+	What I will do today: Study for MAT232.
+	Obstacles I face: None.
+
+Oct 25,2024
+	What I did yesterday: Studied for MAT232.
+	What I will do today: Study for CSC207.
+	Obstacles I face: None.
+
+Oct 26,2024
+	What I did yesterday: Studied for CSC207.
+	What I will do today: Study.
+	Obstacles I face: None.
+
+Oct 27,2024
+	What I did yesterday: Studied.
+	What I will do today: Go over code before submission.
+	Obstacles I face: None.
+
+Oct 28,2024
+	What I did yesterday: Reviewed the sprint2 code.
+	What I will do today: Wait for sprint3.
+	Obstacles I face: None.
+
+Oct 29,2024
+	What I did yesterday: Waited for sprint3.
+	What I will do today: Working on US3.009 and US3.010.
+	Obstacles I face: Figuring out a way to make US3.009 possible given only string of current shape.
+
+Oct 30,2024
+	What I did yesterday: Worked on US3.009 and US3.010.
+	What I will do today: Work on US3.009 and US3.010.
+	Obstacles I face: Finding another way around issue from before without making another necessary BUG.
+
+Oct 31,2024
+	What I did yesterday: Finished US3.009.
+	What I will do today: Work on US3.010.
+	Obstacles I face: None.
+
+Nov 1,2024
+	What I did yesterday: Worked on US3.010.
+	What I will do today: Continue US3.010 and start BUG3.007.
+	Obstacles I face: Accidentally wiped all my code, had to redo the entire US3.010 code again.
+
+Nov 2,2024
+	What I did yesterday: Completed US3.010 and BUG3.007.
+	What I will do today: Review code.
+	Obstacles I face: None.
+
+Nov 3,2024
+	What I did yesterday: Discuss code design, looking for bugs.
+	What I will do today: Nothing.
+	Obstacles I face: None.
+
+Nov 4,2024
+	What I did yesterday: Nothing.
+	What I will do today: Begin sprint 4.
+	Obstacles I face: None.
+
+Nov 5,2024
+	What I did yesterday: Started sprint 4.
+	What I will do today: Work on US4.006.
+	Obstacles I face: Figuring out a way to prevent g2d from modifying all shapes instead of just the shape being drawn.
+
+Nov 6,2024
+	What I did yesterday: Finished US4.006.
+	What I will do today: Work on BUG4.010.
+	Obstacles I face: None.
+
+Nov 7,2024
+	What I did yesterday: Completed BUG4.010.
+	What I will do today: Studying for STA256 TT2.
+	Obstacles I face: None.
+
+Nov 8,2024
+	What I did yesterday: Studied.
+	What I will do today: Studying for STA256 TT2.
+	Obstacles I face: None.
+
+Nov 9,2024
+	What I did yesterday: Studied for STA256 TT2.
+	What I will do today: Work on BUG4.011.
+	Obstacles I face: None.
+
+Nov 10,2024
+	What I did yesterday: Completed BUG4.011.
+	What I will do today: Add to final architecture and skim through all completed tasks for any issues.
+	Obstacles I face: Creating diagrams freezes my entire intellij app.
+
+Nov 11,2024
+	What I did yesterday: Completed A2.
+	What I will do today:
+	Obstacles I face:
+
+Nov 12,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 13,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 14,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+

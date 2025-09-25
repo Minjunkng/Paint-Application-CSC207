@@ -1,0 +1,143 @@
+(replicate sections below for each feature you want to highlight)
+--------------------------------------------------------------------------------
+FeatureName: Resizable Canvas
+
+Description: 
+	The drawable canvas size can be adjusted by drawing the window.
+
+Reference: 
+	US3.001
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Object Eraser
+
+Description:
+	The object eraser brush is able eraser entire drawable objects upon contact.
+
+Reference:
+	US3.002
+	BUG4.010
+	BUG4.009
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Save Current Drawing
+
+Description:
+	Allows the user to save the current drawing as a PNG using the save
+	button in the first dropdown menu.
+
+Reference:
+	US4.008
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Opacity Selector
+
+Description:
+	Allows the user to set the opacity of the current brush.
+
+Reference:
+	US4.004
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Undo
+
+Description:
+	Allows the user to undo a recently made move.
+
+Reference:
+	US3.011
+	BUG4.001
+	BUG4.002
+	BUG4.005
+	BUG4.006
+	BUG4.012
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Redo
+
+Description:
+	Allows the user to re-add a recently undone move.
+
+Reference:
+	US3.012
+	BUG4.001
+    BUG4.002
+    BUG4.005
+    BUG4.006
+    BUG4.012
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Cut
+
+Description:
+	Allows the user to hover over the canvas to select an object to cut from canvas
+
+Reference:
+	US4.002
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Save and Open
+
+Description:
+	Allows the user to store the current canvas, and allows user to open and select
+	between stored canvases, using a local .ser file.
+
+Reference:
+	US4.011
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: New Button
+
+Description:
+	The new button gives the user an entirely new blank canvas.
+
+Reference:
+	US4.009
+	BUG4.004
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Clear Shape
+
+Description:
+	On button click, clearing the shape will remove the most recent shape selected
+	based on the current mode.
+
+Reference:
+	US3.009
+	US4.009
+	BUG3.001
+	BUG3.008
+	BUG4.002
+	BUG4.007
+	BUG4.011
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Toggle Gridlines
+
+Description:
+	On button click, display a purely visual gridlines as a drawing aid. On different clicks,
+	gridlines will change sizes or be turned off completely.
+
+Reference:
+	US3.010
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+FeatureName: Color Selector
+
+Description:
+	Allows the user to select the color of the current brush using a color picker.
+
+Reference:
+	US4.005
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+FeatureName: (name)
+
+Description:
+	(describe the feature)
+
+Reference:
+	(list of the BUG/US involved in creating this feature)
+--------------------------------------------------------------------------------
+

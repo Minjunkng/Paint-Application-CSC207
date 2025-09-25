@@ -1,0 +1,190 @@
+# Fill in, commit and push each day.
+Member name: Vicky Li     email: vvv.li@mail.utoronto.ca     utorid: livicky8
+
+Oct 14,2024
+	What I did yesterday:   N/A
+	What I will do today:   N/A (assignment not released yet)
+	Obstacles I face:   N/A
+
+Oct 15,2024
+	What I did yesterday:   N/A
+	What I will do today:   I will git clone, input contact, set up repo and discuss with group members
+	                        about merging and branching for when the assignment starts.
+	Obstacles I face:   I am still troubleshooting with git.
+
+Oct 16,2024
+	What I did yesterday:   I have git cloned and set up repo.
+	What I will do today:   I will work on BUG1.005 and write some more user stories.
+	Obstacles I face:   I am still figuring out how the given code works and how to modify it to perform as needed.
+
+Oct 17,2024
+	What I did yesterday:   I have completed BUG1.005 and wrote 2 user stories.
+	What I will do today:   I will work on US1.003.
+	Obstacles I face:   I need to figure out how to not have a class variable for rectangle and how to deal with
+	                    dragging the rectangle in different directions.
+
+Oct 18,2024
+	What I did yesterday:   I have completed US1.003.
+	What I will do today:   I will look for more ideas to potentially implement and think about how the architecture
+	                        could benefit from certain types of design choices seen in lectures.
+	Obstacles I face:   I discussed with group members about the scrum schedule, and we decided to revert to an older
+	                    version of the repo since there were some deviations; however, they have now been resolved.
+
+Oct 19,2024
+	What I did yesterday:   I thought about using inheritance to make adding additional shapes more extendable by having
+	                        abstract templates for all shapes.
+	What I will do today:   I will start planning which sprints should be done in sprint2 and think about how the
+	                        architecture could be improved by changing up the design choices.
+	Obstacles I face:   There are potentially no obstacles today since I am still in only planning the changes.
+
+Oct 20,2024
+	What I did yesterday:   I thought about potential design choices to implement.
+	What I will do today:   I will wait for sprint2.
+	Obstacles I face:   I do not have any obstacles today.
+
+Oct 21,2024
+	What I did yesterday:   I thought about potential implementations of design choices.
+	What I will do today:   I write the shape stories, move in new stories and bugs to sprint2. I will also do BUG2.004.
+	Obstacles I face:   I need to look for a way so that we do not have to store lists of each object being drawn.
+
+Oct 22,2024
+	What I did yesterday:   I completed BUG2.004 and US2.007.
+	What I will do today:   I will look at the code we have now and find potential ways to better the architecture and
+	                        clean up the comments and/or unneeded code. I will also edit and add more of my own User
+	                        stories.
+	Obstacles I face:   I need to find User stories that can be implemented. Most of the obvious ones have already been
+	                    taken so I need to look for more niche behaviors to implement.
+
+Oct 23,2024
+	What I did yesterday:   I cleaned up some of the classes and added/edited new user stories.
+	What I will do today:   I will look over the general code and find more potential user stories.
+	Obstacles I face:   I will need to find more ways better the design of our code.
+
+Oct 24,2024
+	What I did yesterday:   I refactored code, updated logs, and check other group members work.
+	What I will do today:   I will continue refactoring and looking for ways to better the design.
+	Obstacles I face:   I have a MAT232 midterm today.
+
+Oct 25,2024
+	What I did yesterday:   I did my MAT232 midterm.
+	What I will do today:   I will study for CSC207 midterm
+	Obstacles I face:   I find it hard memorizing UMLs for the design patterns.
+
+Oct 26,2024
+	What I did yesterday:   I studied for the CSC207 midterm.
+	What I will do today:   I will do the CSC207 midterm and look over the code to give feedback to my members.
+	Obstacles I face:   I think the midterm went ok, but it was still a little challenging.
+
+Oct 27,2024
+	What I did yesterday:   I did the CSC207 midterm and looked over my team's overall code.
+	What I will do today:   I will update my User stories as some were completed as a result of this sprint.
+	Obstacles I face:   I need to find other user stories to replace my redundant ones.
+
+Oct 28,2024
+	What I did yesterday:   I edited my user stories.
+	What I will do today:   I wait for sprint 3.
+	Obstacles I face:   I need to pick which user story to leave since I added too many.
+
+Oct 29,2024
+	What I did yesterday:   I waited for sprint 3.
+	What I will do today:   I will read the sprint 3 assignment sheet and get started. I also completed US3.001 and
+	                        worked on US3.002.
+	Obstacles I face:   I need to understand and get used to the new pull request format.
+
+Oct 30,2024
+	What I did yesterday:   I looked over pull request for BUG3.007 and finished two user stories, US3.002 and US3.002.
+	What I will do today:   I will look over the pull request for US3.009.
+	Obstacles I face:   I accidentally commited with "hi" as the message and tried to edit it. I was trying to check if
+	                    my working branch was clean which it was. I did not push this commit but it automatically
+	                    commited when I merged US3.009 with master. I now know not to commit to check if my branch is
+	                    clean as it will be pushed automatically when a merge happens.
+
+Oct 31,2024
+	What I did yesterday:   I handled the pull request for US3.009.
+	What I will do today:   I looked over the code for any possible revisions and also waited for any pull requests.
+	Obstacles I face:   None.
+
+Nov 1,2024
+	What I did yesterday:   I looked over the code for any possible revisions.
+	What I will do today:   I will discuss with my group members about how to fix a new bug that resulted from other
+	                        user stories.
+	Obstacles I face:   After merging both US3.009 and US3.002, we discovered a problem when object eraser is
+                        selected, the shape deleter will try to delete the object eraser.
+
+Nov 2,2024
+	What I did yesterday:   I helped come up with solutions for the BUG that resulted from US3.009 and US3.002.
+	What I will do today:   I will look over the code for any potential bugs to include in sprint4.
+	Obstacles I face:   None.
+
+Nov 3,2024
+	What I did yesterday:   I looked over and tested the code for bugs we could fix in sprint4.
+	What I will do today:   I will wait for sprint4.
+	Obstacles I face:   None.
+
+Nov 4,2024
+	What I did yesterday:   I waited for sprint4.
+	What I will do today:   I moved remaining BUGS and USs to sprint4 and claimed a US4.005 and finished.
+	Obstacles I face:   I need to think of more features to add.
+
+Nov 5,2024
+	What I did yesterday:   I finished US4.005.
+	What I will do today:   I finished US4.008 and will work on US 4.009.
+	Obstacles I face:   I code on a MacBook, and I encountered a mac specific error when I tried to save an empty
+	                    canvas. I tried to find ways to fix it but the error does not impair the program, and it has
+	                    to do with how MacBooks handle animation. Due to these reasons, I think it is ok to leave it
+	                    as is since saving an empty canvas does not error on Windows machines.
+
+Nov 6,2024
+	What I did yesterday:   I finished US4.008.
+	What I will do today:   I finished 4.009 and added US4.004.
+	Obstacles I face:   I had to fix an issue regarding null colored shapes for my US4.005. I also realize that US4.004
+	                    depends on US4.005, so I need to wait for my pullRequest for US4.005 to be merged.
+
+Nov 7,2024
+	What I did yesterday:   I finished US4.009 and worked on US4.004.
+	What I will do today:   I will handle the pullRequest for US4.010.
+	Obstacles I face:   I need to discuss with my group about the architecture text files.
+
+Nov 8,2024
+	What I did yesterday:   I did the pullRequest for US4.010.
+	What I will do today:   I helped with US4.007. I also need to wait for US4.011 to finish in order to redo US4.008.
+	                        I also did the pullRequest for US4.011 and US4.007 so that I could start on BUG4.010.
+	Obstacles I face:   One of the other members did not realize there was a US for saving the canvas as a PNG and
+	                    is now doing another US which saves the canvas as an editable file instead. We discussed that
+	                    I will edit US4.008 after so that we can have a drop-down menu option to pick whether the
+	                    user would like to save a PNG or editable file (US4.011). This means I will pull master in
+	                    US4.008 branch once US4.011 is merged so that I can implement the drop-down menu.
+
+Nov 9,2024
+	What I did yesterday:   I finished BUG4.010.
+	What I will do today:   I will fix the bad merge for BUG4.009.
+	Obstacles I face:   Another member overwrote the merged BUG4.009 classes and then fixed it in master; however, to
+	                    make sure it matches my branch completely, I will fix it myself.
+
+Nov 10,2024
+	What I did yesterday:   I looked over all the code for small potential fixes. I also fixed a bad merge.
+	What I will do today:   I worked on the architecture.txt file and added Drawable Blueprint and Global DrawableState.
+	Obstacles I face:   I need to figure out what to write for the high level architectures.
+
+Nov 11,2024
+	What I did yesterday:   I added Drawable Blueprint and Global DrawableState to design patterns portion
+	                        and New Concrete Shape/Drawable Object to high level architecture portion of
+	                        architecture.txt.
+	What I will do today:
+	Obstacles I face:
+
+Nov 12,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 13,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
+Nov 14,2024
+	What I did yesterday:
+	What I will do today:
+	Obstacles I face:
+
