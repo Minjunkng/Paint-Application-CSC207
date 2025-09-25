@@ -1,4 +1,4 @@
-# Paint-Application-CSC207
+# Paint-Application
 Java Drawing Application
 
 An interactive drawing application developed in Java using Agile methodology. This project demonstrates teamwork, iterative development, and feature-rich design. Created for a CSC207 assignment for the University of Toronto. Made in collaboration with:
@@ -6,7 +6,7 @@ An interactive drawing application developed in Java using Agile methodology. Th
 - Vicky vvv.li@mail.utoronto.ca
 - Justin jus.lam@mail.utoronto.ca
 
-✨ **Features**
+**Features**
 
 - Multiple shape tools: Circle, Rectangle, Square, Triangle, Oval, Polyline, Squiggle
 - Real-time visual feedback while drawing
@@ -18,7 +18,7 @@ An interactive drawing application developed in Java using Agile methodology. Th
 - Save files directly to the user to later import into application
 - Customizable styles: color, fill, opacity, line thickness
 
-🛠️ **Technologies**
+**Technologies**
 
 - Java
 - mJavaFX (GUI)
