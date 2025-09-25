@@ -1,0 +1,4 @@
+member1: Minjun Kang minjun.kang@mail.utoronto.ca
+member2: Maxx, maxx.eng@mail.utoronto.ca
+member3: Vicky vvv.li@mail.utoronto.ca
+member4: Justin jus.lam@mail.utoronto.ca
