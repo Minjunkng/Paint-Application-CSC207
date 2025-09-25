@@ -7,7 +7,7 @@ An interactive drawing application developed in Java using Agile methodology. Th
 - Vicky vvv.li@mail.utoronto.ca
 - Justin jus.lam@mail.utoronto.ca
 
-✨ # Features
+✨ **Features**
 
 - Multiple shape tools: Circle, Rectangle, Square, Triangle, Oval, Polyline, Squiggle
 - Real-time visual feedback while drawing
@@ -19,7 +19,7 @@ An interactive drawing application developed in Java using Agile methodology. Th
 - Save files directly to the user to later import into application
 - Customizable styles: color, fill, opacity, line thickness
 
-🛠️ # Technologies
+🛠️ **Technologies**
 
 - Java
 - mJavaFX (GUI)
