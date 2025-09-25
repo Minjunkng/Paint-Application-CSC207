@@ -2,7 +2,6 @@
 Java Drawing Application
 
 An interactive drawing application developed in Java using Agile methodology. This project demonstrates teamwork, iterative development, and feature-rich design. Created for a CSC207 assignment for the University of Toronto. Made in collaboration with:
-- Minjun Kang minjun.kang@mail.utoronto.ca
 - Maxx, maxx.eng@mail.utoronto.ca
 - Vicky vvv.li@mail.utoronto.ca
 - Justin jus.lam@mail.utoronto.ca
