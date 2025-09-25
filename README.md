@@ -1,2 +1,30 @@
 # Paint-Application-CSC207
-A Microsoft paint like application. An interactive Java-based drawing app built with Agile methodology. Features include shape tools (circle, rectangle, square, triangle, oval, polyline, squiggle), real-time feedback, undo/redo, copy-paste, eraser, gridlines, canvas resizing, and customizable styles (color, fill, opacity, thickness).
+Java Drawing Application
+
+An interactive drawing application developed in Java using Agile methodology. This project demonstrates teamwork, iterative development, and feature-rich design.
+
+✨ Features
+
+Multiple shape tools: Circle, Rectangle, Square, Triangle, Oval, Polyline, Squiggle
+
+Real-time visual feedback while drawing
+
+Undo / Redo actions
+
+Copy / Paste shapes
+
+Eraser tool
+
+Gridlines for alignment
+
+Resizable canvas
+
+Customizable styles: color, fill, opacity, line thickness
+
+🛠️ Technologies
+
+Java
+
+JavaFX (GUI)
+
+Agile development practices
